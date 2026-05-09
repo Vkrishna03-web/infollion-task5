@@ -1,0 +1,123 @@
+.wrapper {
+  margin-bottom: 10px;
+  transition: opacity 0.15s;
+}
+
+.dragging { opacity: 0.4; }
+
+.card {
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.child {
+  border-left: 2.5px solid var(--border-accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: #FAFCFB;
+  margin-top: 8px;
+}
+
+/* ── Row 1 ── */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.handle {
+  cursor: grab;
+  color: var(--text-tertiary);
+  font-size: 16px;
+  user-select: none;
+  flex-shrink: 0;
+  padding: 2px 3px;
+  border-radius: var(--radius-sm);
+  transition: color 0.12s;
+}
+.handle:hover { color: var(--color-teal-600); }
+.handle:active { cursor: grabbing; }
+
+.numBadge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-teal-800);
+  background: var(--color-teal-50);
+  border: 0.5px solid var(--color-teal-100);
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.textInput {
+  flex: 1;
+  height: 34px;
+}
+
+.typeSelect {
+  width: 138px;
+  flex-shrink: 0;
+  height: 34px;
+}
+
+.deleteBtn {
+  flex-shrink: 0;
+  border-color: var(--border);
+  color: var(--text-tertiary);
+  padding: 6px 9px;
+}
+.deleteBtn:hover {
+  border-color: var(--color-red-600);
+  color: var(--color-red-600);
+  background: var(--color-red-50);
+}
+
+/* ── True/False row ── */
+.tfRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tfBtn {
+  padding: 5px 15px;
+  font-size: 12px;
+}
+
+.tfTrue {
+  border: 1.5px solid var(--color-teal-600) !important;
+  background: var(--color-teal-50) !important;
+  color: var(--color-teal-800) !important;
+  font-weight: 500 !important;
+}
+
+.tfFalse {
+  border: 1.5px solid var(--color-coral-600) !important;
+  background: var(--color-coral-50) !important;
+  color: var(--color-coral-800) !important;
+  font-weight: 500 !important;
+}
+
+.tfHint {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-left: 4px;
+}
+
+/* ── Add child ── */
+.addChildBtn {
+  font-size: 12px;
+  padding: 5px 13px;
+  border: 0.5px dashed var(--border-accent);
+  background: var(--color-teal-50);
+  color: var(--color-teal-800);
+  align-self: flex-start;
+  margin-top: 2px;
+}
+.addChildBtn:hover { background: var(--color-teal-100); }
